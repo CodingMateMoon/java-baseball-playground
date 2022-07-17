@@ -1,5 +1,6 @@
 package study;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -8,8 +9,8 @@ public class
 StringTest {
     @Test
     void replace() {
-        String actual = "abc".replace("b", "d");
-        assertThat(actual).isEqualTo("adc");
+        String actual = "hello yelim".replace("yelim", "eunjung");
+        assertThat(actual).isEqualTo("hello janghyun");
     }
 
     @Test
@@ -25,5 +26,10 @@ StringTest {
         assertThat(exArray).contains("2");
         assertThat(exArray).containsExactly("1", "2");
         assertThat(exArray2).containsExactly("1");
+    }
+
+    @BeforeEach
+    void setUp() {
+
     }
 }
